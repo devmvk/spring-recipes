@@ -1,11 +1,17 @@
 package com.devmvk.reciepes.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Notes {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String recipeNotes;
 
+    @OneToOne
     private Recipe recipe;
 
     public Long getId() {

@@ -1,5 +1,9 @@
 package com.devmvk.reciepes.domain;
 
+
+import javax.persistence.Entity;
+
+@Entity
 public class Recipe {
 
     private String description;
