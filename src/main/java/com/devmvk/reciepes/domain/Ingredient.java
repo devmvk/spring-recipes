@@ -1,13 +1,18 @@
 package com.devmvk.reciepes.domain;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 
+@Entity
 public class Ingredient {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private BigDecimal quantity;
 
+    @ManyToOne
     private Recipe recipe;
 
     public Long getId() {
